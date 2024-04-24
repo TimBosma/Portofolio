@@ -56,11 +56,10 @@ footer {
 
 @media screen and (max-width: 768px) {
   header nav {
-      display: flex;
-      justify-content: center;
+    display: flex;
+    justify-content: center;
   }
-
   main {
-      grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 }

@@ -1,0 +1,77 @@
+// Define variables
+$primary-color: #1e32a4;
+$text-color: #fff;
+$link-background: #000;
+
+// Mixin for font-family
+@mixin font-namespace {
+  font-family: Arial, sans-serif;
+}
+
+// Styles
+body {
+  @include font-namespace;
+  margin: 0;
+  padding: 0;
+}
+
+header, footer {
+  background-color: $primary-color;
+  color: $text-color;
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: $text-color;
+  text-decoration: none;
+  background-color: $link-background;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+nav ul {
+  margin-left: auto;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+section {
+  border: 1px solid #f0ebeb;
+  padding: 20px;
+}
+
+footer {
+  background-color: $primary-color;
+  color: $text-color;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: right;
+}
+
+@media screen and (max-width: 768px) {
+  header nav {
+    display: flex;
+    justify-content: center;
+  }
+
+  main {
+    grid-template-columns: 1fr;
+  }
+}
