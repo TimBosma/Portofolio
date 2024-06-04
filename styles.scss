@@ -1,0 +1,77 @@
+$color_1: var(--text-color);
+$font-family_1: Arial, sans-serif;
+$background-color_1: var(--primary-color);
+$background-color_2: var(--link-background);
+
+/* styles.css */
+/* Define variables */
+/* Styles */
+&:root {
+	--primary-color: #1e32a4;
+	--text-color: #fff;
+	--link-background: #000;
+}
+body {
+	font-family: $font-family_1;
+	margin: 0;
+	padding: 0;
+}
+header {
+	background-color: $background-color_1;
+	color: $color_1;
+	padding: 10px;
+	text-align: center;
+}
+footer {
+	background-color: $background-color_1;
+	color: $color_1;
+	padding: 10px;
+	text-align: center;
+	background-color: $background-color_1;
+	color: $color_1;
+	padding: 10px;
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+nav {
+	ul {
+		list-style: none;
+		padding: 0;
+		margin-left: auto;
+		li {
+			display: inline;
+			margin-right: 20px;
+			a {
+				color: $color_1;
+				text-decoration: none;
+				background-color: $background-color_2;
+				padding: 10px 20px;
+				border-radius: 5px;
+			}
+		}
+	}
+}
+main {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-gap: 20px;
+	
+padding: 20px;
+}
+section {
+	border: 1px solid #f0ebeb;
+	padding: 20px;
+}
+@media screen and (max-width: 768px) {
+	header {
+		nav {
+			display: flex;
+			justify-content: center;
+		}
+	}
+	main {
+		grid-template-columns: 1fr;
+	}
+}
